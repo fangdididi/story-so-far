@@ -1,0 +1,30 @@
+{
+  "card": {"story": "FICTIONAL EXAMPLE - Quarry DB (an invented open-source database) is said to be changing its license", "as_of": "2026-03-04T09:00Z", "window_from": "2026-03-02", "user_knows": "Saw one angry post on Monday", "why": "decide", "depth": "5min", "out_of_scope": ["the founders' personal lives"]},
+  "origin": {"id": "s1", "what": "Pull request renaming LICENSE to a source-available text", "event_time": "2026-03-02T18:10Z", "url": "https://example.invalid/quarry/pull/4410"},
+  "sources": [
+    {"id": "s1", "layer": "primary", "who": "Quarry repo (PR #4410)", "published": "2026-03-02T18:10Z", "url": "https://example.invalid/quarry/pull/4410", "self_interested": false},
+    {"id": "s2", "layer": "community", "who": "forum thread 'Quarry is going closed'", "published": "2026-03-02T21:00Z", "url": "https://example.invalid/forum/88"},
+    {"id": "s3", "layer": "community", "who": "short-video recap", "published": "2026-03-03T08:00Z", "url": "https://example.invalid/video/7", "echo_of": "s2"},
+    {"id": "s4", "layer": "community", "who": "newsletter item", "published": "2026-03-03T10:00Z", "url": "https://example.invalid/news/12", "echo_of": "s2"},
+    {"id": "s5", "layer": "primary", "who": "Quarry Inc. blog", "published": "2026-03-03T16:00Z", "url": "https://example.invalid/blog/license", "self_interested": true},
+    {"id": "s6", "layer": "market", "who": "prediction market 'Quarry reverts by April'", "published": "2026-03-04T08:00Z", "url": "https://example.invalid/market/q"}
+  ],
+  "claims": [
+    {"id": "c1", "text": "A pull request proposing a source-available license was opened in the main repo", "status": "CONFIRMED", "sources": ["s1"]},
+    {"id": "c2", "text": "All past releases will be relicensed", "status": "RUMOR", "sources": ["s2", "s3", "s4"]},
+    {"id": "c3", "text": "Only releases from 9.0 onward change; 8.x stays under the old license", "status": "CLAIMED", "by": "Quarry Inc.", "sources": ["s5"]}
+  ],
+  "beats": [
+    {"event_time": "2026-03-02T18:10Z", "what": "License PR opened", "claims": ["c1"], "turn": true},
+    {"event_time": "2026-03-02T21:00Z", "what": "Forum thread says every version goes closed", "claims": ["c2"]},
+    {"event_time": "2026-03-03T16:00Z", "report_time": "2026-03-03T16:00Z", "what": "Company blog: change applies from 9.0", "claims": ["c3"]}
+  ],
+  "sides": [
+    {"who": "Quarry Inc.", "position": "Cloud resellers profit without contributing; the new terms only bind hosted resale from 9.0."},
+    {"who": "Long-time contributors", "position": "Contributions were made under the old terms; changing them without a vote breaks trust."}
+  ],
+  "heat": [{"topic": "Whether a community fork will start", "engagement": "forum thread: 1,240 replies", "fetched_at": "2026-03-04T08:30Z"}],
+  "watch": [{"when": "2026-03-10", "what": "Maintainer call where the PR is scheduled for decision"}],
+  "would_change": ["The PR merging or closing", "Any statement from the foundation that holds the trademark"],
+  "headline": "A license change is proposed, not merged; the company says it only affects 9.0+, and the 'every version' story traces back to a single forum post."
+}
